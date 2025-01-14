@@ -20,7 +20,7 @@ public class SpringDataJpaApplication {
         StudentRepo repo = context.getBean(StudentRepo.class);
 
         s1.setRollNo(101);
-        s1.setName("Dinithi");
+        s1.setName("Dinithi");  //update
         s1.setMarks(98);
 
         s2.setRollNo(102);
@@ -41,9 +41,12 @@ public class SpringDataJpaApplication {
 //        Optional<Student> s = repo.findById(106);
 //        System.out.println(s.orElse(new Student()));
 
-        System.out.println(repo.findByName("Jk"));
-        System.out.println(repo.findByMarks(99));
-        System.out.println(repo.findByMarksGreaterThan(97));
+//        System.out.println(repo.findByName("Jk"));
+//        System.out.println(repo.findByMarks(99));
+//        System.out.println(repo.findByMarksGreaterThan(97));
+
+        repo.save(s1);  //update
+        repo.delete(s3);
 
 
     }
