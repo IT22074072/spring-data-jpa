@@ -30,7 +30,13 @@ public class SpringDataJpaApplication {
         s3.setMarks(99);
 
 
-        repo.save(s1);
+       // repo.save(s1);
+        //repo.save(s2);
+        //repo.save(s3);
+
+        System.out.println(repo.findAll());
+
+
     }
 
 }
